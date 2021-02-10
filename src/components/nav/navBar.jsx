@@ -7,7 +7,7 @@ function NavBar() {
                 <div className="title-question"><h2>Where in the world?</h2></div>
                 <div className="dark-mode">Dark Mode</div>
                 
-                </nav>
+            </nav>
        
 
     )
