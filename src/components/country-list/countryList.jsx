@@ -1,33 +1,10 @@
 import React from 'react';
 import CountryCard from '../country/countryCard';
 
-function CountryList () {
-  const countries = [{
-    name: "Germany",
-    data: {
-      population: 81232314123,
-      region: "Europe",
-      capital: "Berlin"
-    }
-  },
-  {
-    name: "Spain",
-    data: {
-      population: 81232314123,
-      region: "Europe",
-      capital: "Berlin"
-    }
-  },
-  {
-    name: "Metallica",
-    data: {
-      population: 81232314123,
-      region: "Europe",
-      capital: "Berlin"
-    }
-  }
-]
-console.log('test')
+function CountryList ({ countries = [] }) {
+
+  console.log('countries', countries)
+
   return(
     <div>
       {
@@ -36,9 +13,9 @@ console.log('test')
             <div key={country.name}>
               <CountryCard
                 name={country.name}
-                population={country.data.population}
-                region={country.data.region}
-                capital={country.data.capital}
+                population={country.population}
+                region={country.region}
+                capital={country.capital}
               />
             </div>
           )
