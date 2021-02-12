@@ -1,12 +1,9 @@
- 
- async function getAllCountries() {
-     const url ='https://restcountries.eu/rest/v2/all';
-    const  response = await  fetch (url);
-     const data = await  response.json();
-     
-     return data 
- }
+async function getAllCountries() {
+  const url = "https://restcountries.eu/rest/v2/all";
+  const response = await fetch(url);
+  const data = await response.json();
 
- 
-   
-    export default  getAllCountries;
+  return data;
+}
+
+export default getAllCountries;
