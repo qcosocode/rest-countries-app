@@ -52,7 +52,6 @@ function Search({allCountries}) {
                 <option value="3">Europa</option>
                 <option value="4">Asia</option> 
                 <option value="5">Oceania</option> 
-        
              </select>
            
              
