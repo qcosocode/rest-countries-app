@@ -1,26 +1,35 @@
-import React from 'react';
+import React, { Fragment } from 'react'
+import CountryList from '../country-List/CountryList'
+import './countryCard.css'
 
-function CountryCard ({ name, population, capital, region}) {
+function CountryCard({country , id}) {
 
-  return (
-    <div>
-      <div className="name">{name}</div>
-      <div className="description">
-        <ul>
-          <li>
-            <span>{population}</span>
-          </li>
-          <li>
-            <span>{region}</span>
-          </li>
-          <li>
-            <span>{capital}</span>
-          </li>
-        </ul>
-      </div>
+const {name , population , region , capital, flag} = country
 
-    </div>
-  )
+return(
+            <Fragment>
+                    <div className="country-card">
+                    <img src={flag} alt="" />
+                      <div className="description">
+                          <div className="name">
+                          <p >{name}</p>
+                          </div>
+                         
+                          <p key="">Population :{population}</p>
+                          <p>Capital:  {capital}</p>
+                          <p>Region:    {region}</p>
+
+                         </div>
+                   
+                  
+
+
+                    </div>
+                      
+            </Fragment>
+        
+          
+        
+)
 }
-
 export default CountryCard

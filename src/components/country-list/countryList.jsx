@@ -1,28 +1,45 @@
-import React from 'react';
-import CountryCard from '../country/countryCard';
+import {React, Fragment} from 'react'
+import CountryCard from '../country/CountryCard'
+import './CountryList.css'
 
-function CountryList ({ countries = [] }) {
 
-  console.log('countries', countries)
+function CountryList({countries}) {
 
-  return(
-    <div>
-      {
-        countries.map(country => {
-          return(
-            <div key={country.name}>
-              <CountryCard
-                name={country.name}
-                population={country.population}
-                region={country.region}
-                capital={country.capital}
-              />
-            </div>
-          )
-        })
-      }
-    </div>
-  )
+ 
+    
+    
+    return (
+       <Fragment>
+
+           <div className="Content">
+           
+                  {
+                      countries.map(country => {
+                          return (
+                             // <li key={e.alpha2Code}>{e.name}--{e.population}--{e.region}--{e.capital}</li>
+                              <CountryCard
+                             key  = {country.alpha2Code}
+                              country = {country}
+                              
+                              />
+                          )
+                      })
+                  } 
+            
+           </div>
+               
+
+               
+              
+
+       </Fragment>
+        
+    
+
+
+           
+
+    )
 }
 
 export default CountryList
